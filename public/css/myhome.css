@@ -5,49 +5,55 @@
 }
 
 html {
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory; /* move snap to html */
-  overflow-y: scroll; /* ensure scroll */
+  /* scroll-behavior: smooth; removed – interferes with snap */
+  scroll-snap-type: y mandatory; /* snap container */
   height: 100%;
 }
 
 body {
   min-height: 100%; /* let it expand naturally */
+  margin: 0;
+  overflow-y: auto; /* allow scrolling */
 }
 
 /* Sections */
 .section {
   height: 100vh;
   scroll-snap-align: start;
+  scroll-snap-stop: always; /* force clean snap */
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* center content by default */
 
   font-size: 2rem;
   color: white;
 }
 
+/* First section */
 .one {
   background: #1abc9c;
-  justify-content: flex-start;
+  justify-content: flex-start; /* left-align only section 1 */
   padding-left: 3rem;
-  padding-left: 2rem;
-  gap: 2rem;
+  gap: 2rem; /* space between h1 and paragraph */
 }
+
+/* Text */
 .one h1 {
   font-size: 3rem; /* hero heading size */
   margin: 0;
 }
+
 .one p {
   font-size: 1.25rem; /* smaller than h1 */
   margin: 0;
-  max-width: 800 px; /* optional, limits line length */
+  max-width: 800px; /* optional, limits line length */
 }
 
 .two {
   background: #3498db;
 }
+
 .three {
   background: #9b59b6;
 }
