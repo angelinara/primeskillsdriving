@@ -1,10 +1,53 @@
-.hero {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory; /* move snap to html */
+  overflow-y: scroll; /* ensure scroll */
+  height: 100%;
+}
+
+body {
+  min-height: 100%; /* let it expand naturally */
+}
+
+/* Sections */
+.section {
   height: 100vh;
+  scroll-snap-align: start;
+
   display: flex;
   align-items: center;
-  padding-left: 4rem;
+  justify-content: center;
+
+  font-size: 2rem;
+  color: white;
 }
-.hero h1 {
+
+.one {
+  background: #1abc9c;
+  justify-content: flex-start;
+  padding-left: 3rem;
+  padding-left: 2rem;
+  gap: 2rem;
+}
+.one h1 {
+  font-size: 3rem; /* hero heading size */
   margin: 0;
-  font-size: 3rem;
+}
+.one p {
+  font-size: 1.25rem; /* smaller than h1 */
+  margin: 0;
+  max-width: 800 px; /* optional, limits line length */
+}
+
+.two {
+  background: #3498db;
+}
+.three {
+  background: #9b59b6;
 }
