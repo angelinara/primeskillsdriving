@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html {
@@ -12,11 +11,10 @@ html {
 
 body {
   min-height: 100%; /* let it expand naturally */
-  margin: 0;
   overflow-y: auto; /* allow scrolling */
+  font-family: sans-serif;
 }
 
-/* Sections */
 .section {
   height: 100vh;
   scroll-snap-align: start;
@@ -24,36 +22,61 @@ body {
 
   display: flex;
   align-items: center;
-  justify-content: center; /* center content by default */
 
-  font-size: 2rem;
+  padding: 0;
   color: white;
 }
 
-/* First section */
+/* Section 1 */
 .one {
-  background: #1abc9c;
-  justify-content: flex-start; /* left-align only section 1 */
-  padding-left: 3rem;
-  gap: 2rem; /* space between h1 and paragraph */
+  background: white;
 }
 
-/* Text */
 .one h1 {
-  font-size: 3rem; /* hero heading size */
+  font-size: 3rem;
+  color: #111;
   margin: 0;
+}
+
+.one .courses li {
+  list-style: none;
+  font-size: 0.9rem;
+  color: #555555e7;
 }
 
 .one p {
-  font-size: 1.25rem; /* smaller than h1 */
+  font-size: 1.25rem;
   margin: 0;
-  max-width: 800px; /* optional, limits line length */
 }
 
-.two {
-  background: #3498db;
+.right-bottom-left,
+.right-bottom-right {
+  display: inline-block;
 }
 
+/* Section 3 */
 .three {
-  background: #9b59b6;
+  list-style: none;
+  font-size: 0.9rem;
+  color: #555555e7;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: #28a745; /* green button */
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 10px; /* small space between text and button */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #218838;
+  transform: scale(1.05);
 }
