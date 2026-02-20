@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime Skills Driving / Become a Driving Instructor</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="instructor-path">
+      <div class="top">
+        <h5>
+          Set your own working hours, learn to teach a valuable life skill, and
+          become a fully qualified driving instructor.
+        </h5>
+      </div>
+      <div class="middle">
+        <ul class="instructor-steps">
+          <li>
+            <strong>1. Check eligibility</strong><br />
+            Be aged 21+, hold a full UK driving licence for at least 3 years,
+            have no more than 6 penalty points, and no driving ban in the last 4
+            years.
+            <br />
+            <a
+              href="https://www.gov.uk/become-a-driving-instructor"
+              target="_blank"
+            >
+              Check eligibility
+            </a>
+          </li>
+
+          <li>
+            <strong>2. Complete a DBS check</strong><br />
+            Required to work with the public, including children and vulnerable
+            adults.
+            <br />
+            <a
+              href="https://www.gov.uk/request-copy-criminal-record"
+              target="_blank"
+            >
+              Apply
+            </a>
+          </li>
+
+          <li>
+            <strong>3. Practice ADI Part 1 -Theory Test</strong><br />
+            Multiple-choice questions and hazard perception tests.
+            <br />
+            <a href="https://www.gov.uk/adi-part-1-test" target="_blank"
+              >Book</a
+            >
+          </li>
+
+          <li>
+            <strong>4. Book ADI Part 1 -Theory Test</strong><br />
+            You must score at least 85% on the multiple choice questions and 57
+            out of 75 on the hazard perception test to pass.
+            <br />
+            <a href="https://www.gov.uk/adi-part-1-test" target="_blank"
+              >Book</a
+            >
+          </li>
+
+          <li>
+            <strong
+              >5. Begin instructor training for ADI Part 2 - Practical
+              Test</strong
+            ><br />
+            Start professional instructor training with Prime Skills.
+            <br />
+            <a href="/become-an-instructor">Practice</a>
+          </li>
+
+          <li>
+            <strong>6. Pass ADI Part 2 - Driving Ability Test</strong><br />
+            Assesses your advanced driving skills and safety standards.
+            <br />
+            <a
+              href="https://www.gov.uk/book-driving-instructor-part-2-test"
+              target="_blank"
+            >
+              Book
+            </a>
+          </li>
+
+          <li>
+            <strong>7. Complete compulsory training for Part 3</strong><br />
+            Includes a minimum of 60 hours of instructor training to prepare for
+            teaching.
+          </li>
+
+          <li>
+            <strong>8. Pass ADI Part 3 - Teaching Ability Test</strong><br />
+            A live lesson assessed by a DVSA examiner.
+            <br />
+            <a
+              href="https://www.gov.uk/book-driving-instructor-part-3-test"
+              target="_blank"
+            >
+              Book
+            </a>
+          </li>
+
+          <li>
+            <strong>9. Register with the DVSA</strong><br />
+            Apply for your Approved Driving Instructor (ADI) badge and start
+            teaching.
+            <br />
+            <a
+              href="https://www.gov.uk/apply-approved-driving-instructor"
+              target="_blank"
+            >
+              Register
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script>
+      fetch("footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>
