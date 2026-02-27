@@ -1,0 +1,586 @@
+/* === Base & Reset === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  color: #1a1a1a;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+/* === Layout === */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+section {
+  padding: 3rem 1.25rem;
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+/* === Navbar === */
+.navbar {
+  background-color: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0.75rem 1.25rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.menu > li > a {
+  display: block;
+  padding: 0.4rem 0.75rem;
+  color: #1a1a1a;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: background-color 0.15s;
+}
+
+.menu > li > a:hover {
+  background-color: #f3f4f6;
+  text-decoration: none;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  min-width: 200px;
+  z-index: 200;
+  padding: 0.25rem 0;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #1a1a1a;
+  font-size: 0.9rem;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f3f4f6;
+  text-decoration: none;
+}
+
+/* === Buttons === */
+.btn,
+.btn1,
+.btn2,
+.btn3,
+.btn-secondary,
+button[type="submit"],
+button[onclick] {
+  display: inline-block;
+  padding: 0.55rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition:
+    background-color 0.15s,
+    opacity 0.15s;
+  text-decoration: none;
+}
+
+.btn,
+button[type="submit"],
+button[onclick] {
+  background-color: #1d4ed8;
+  color: #fff;
+}
+
+.btn:hover,
+button[type="submit"]:hover,
+button[onclick]:hover {
+  background-color: #1e40af;
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #fff;
+  color: #1d4ed8;
+  border: 1px solid #1d4ed8;
+}
+
+.btn-secondary:hover {
+  background-color: #eff6ff;
+  text-decoration: none;
+}
+
+.btn1,
+.btn2,
+.btn3 {
+  background-color: #1d4ed8;
+  color: #fff;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.85rem;
+}
+
+.btn1:hover,
+.btn2:hover,
+.btn3:hover {
+  background-color: #1e40af;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* === Hero Section === */
+.main {
+  background-color: #f0f4ff;
+  padding: 5rem 1.25rem;
+  text-align: center;
+  max-width: 100%;
+}
+
+.intro {
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+}
+
+/* === Why Choose Us === */
+.why-choose-us {
+  background-color: #f9fafb;
+  padding: 2.5rem 1.25rem;
+  max-width: 100%;
+}
+
+/* === Banner Containers & Cards === */
+.banner-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: center;
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+.banner-card {
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  flex: 1 1 240px;
+  max-width: 320px;
+}
+
+.banner-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: #1d4ed8;
+}
+
+.banner-card h4 {
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+  color: #1a1a1a;
+}
+
+.banner-card p {
+  font-size: 0.9rem;
+  color: #4b5563;
+  margin-bottom: 0.75rem;
+}
+
+.banner-subitems {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.banner-subitem {
+  border-top: 1px solid #f3f4f6;
+  padding-top: 0.75rem;
+}
+
+/* === Driving Courses Section === */
+.driving-courses {
+  padding: 3rem 1.25rem;
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+.driving-courses > h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+}
+
+/* === About Page === */
+.about-us {
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+.about-us p {
+  margin-bottom: 1rem;
+  color: #374151;
+}
+
+blockquote {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1.5rem 1.75rem;
+  border-left: 4px solid #1d4ed8;
+  background-color: #f0f4ff;
+  border-radius: 0 6px 6px 0;
+  font-style: italic;
+  color: #374151;
+}
+
+blockquote p {
+  margin-bottom: 0.75rem;
+}
+
+blockquote footer {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  font-style: normal;
+  color: #6b7280;
+}
+
+/* === Prices Page === */
+.prices {
+  padding: 1.5rem 1.25rem;
+  max-width: 700px;
+}
+
+.bottom-right {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.price-packages {
+  list-style: none;
+  padding: 0;
+}
+
+.price-packages h1 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: #1d4ed8;
+}
+
+.price-packages li {
+  padding: 0.35rem 0;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.price-packages li:last-child {
+  border-bottom: none;
+}
+
+/* === Learn to Drive Page === */
+.learn-to-drive .top h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.learn-to-drive .middle {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.8;
+}
+
+.driver-starting-guide {
+  padding: 2rem 1.25rem;
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.driver-starting-guide h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.progress-steps {
+  list-style: none;
+  counter-reset: step-counter;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.progress-steps li {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 0.9rem 1.1rem;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.progress-steps li a {
+  margin-left: 0.5rem;
+}
+
+.bottom.banner {
+  background-color: #f0f4ff;
+  text-align: center;
+  padding: 2.5rem 1.25rem;
+  max-width: 100%;
+}
+
+.bottom.banner h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* === Instructor Page === */
+.instructor-path .top {
+  margin-bottom: 1.5rem;
+}
+
+.instructor-path .top h5 {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: #374151;
+  max-width: 640px;
+}
+
+.instructor-steps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.instructor-steps li {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 0.9rem 1.1rem;
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.7;
+}
+
+.instructor-steps li a {
+  margin-left: 0.25rem;
+}
+
+/* === Contact Page === */
+form {
+  max-width: 560px;
+  margin-inline: auto;
+  padding: 1.25rem;
+}
+
+form p {
+  margin-bottom: 1rem;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.95rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #1a1a1a;
+  transition: border-color 0.15s;
+  font-family: inherit;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #1d4ed8;
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.1);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.google-map {
+  padding: 2rem 1.25rem;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+/* === Footer === */
+.footer {
+  background-color: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+  padding: 2rem 1.25rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.footer-container {
+  margin-bottom: 1rem;
+}
+
+.footer-container h4 {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: #4b5563;
+  font-size: 0.875rem;
+}
+
+.footer-links a:hover {
+  color: #1d4ed8;
+}
+
+.footer-whatsapp {
+  margin-bottom: 1rem;
+}
+
+.footer-whatsapp a {
+  color: #16a34a;
+  font-weight: 500;
+}
+
+.footer-whatsapp a:hover {
+  color: #15803d;
+}
+
+.footer p {
+  color: #9ca3af;
+  font-size: 0.8rem;
+}
+
+/* === Responsive === */
+@media (max-width: 640px) {
+  .intro h1 {
+    font-size: 1.75rem;
+  }
+
+  .banner-card {
+    max-width: 100%;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    padding-left: 1rem;
+  }
+}
