@@ -7,29 +7,15 @@
     />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Automatic and manual driving lessons in Maidenhead, Reading, and Windsor.">
+    <meta
+      name="description"
+      content="Automatic and manual driving lessons in Maidenhead, Reading, and Windsor."
+    />
     <link rel="stylesheet" href="css/my.css" />
     <title>Prime Skills Driving</title>
   </head>
   <body>
-    <nav class="navbar">
-      <ul class="menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li class="dropdown">
-          <a href="#">Driving School</a>
-          <ul class="dropdown-menu">
-            <li><a href="learntodrive.html">Learn to Drive</a></li>
-            <li><a href="#">Theory Test Practice</a></li>
-            <li><a href="#">Insurance</a></li>
-            <li><a href="#">Taxi Driver Training</a></li>
-          </ul>
-        </li>
-        <li><a href="instructor.html">Become an Instructor</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div id="header"></div>
 
     <section class="main">
       <div class="intro">
@@ -64,25 +50,24 @@
         <div class="banner-card beginner">
           <div class="banner-icon"></div>
           <h3>Beginner</h3>
-         
+
           <div class="banner-subitems">
-          <div class="banner-subitem">
-          <h4>Learn to Drive</h4>
-          <p>
-            Skills to drive safely, gain confidence, and ace your practical
-            driving test.
-          </p>
+            <div class="banner-subitem">
+              <h4>Learn to Drive</h4>
+              <p>
+                Skills to drive safely, gain confidence, and ace your practical
+                driving test.
+              </p>
+            </div>
           </div>
 
           <div class="banner-subitem">
-          <h4>Theory Test Practice</h4>
-          <p>
-            Includes guides, practice tests, and personalized progress trackers.
-          </p>
+            <h4>Theory Test Practice</h4>
+            <p>
+              Includes guides, practice tests, and personalized progress
+              trackers.
+            </p>
           </div>
-
-
-        </div>
         </div>
 
         <!-- Advanced -->
@@ -109,51 +94,58 @@
           <h3>Professional</h3>
 
           <div class="banner-subitems">
-          <div class="banner-subitem">
-          <h4>Fleet Training</h4>
-          <p>Professional instruction for company drivers, focusing on safety, compliance, and efficient vehicle operation.</p>
-          </div>
+            <div class="banner-subitem">
+              <h4>Fleet Training</h4>
+              <p>
+                Professional instruction for company drivers, focusing on
+                safety, compliance, and efficient vehicle operation.
+              </p>
+            </div>
 
-          <div class="banner-subitem">
-          <h4>Taxi Driving Training</h4>
-          <p>Course to become a UK licensed Taxi Driver.</p>
+            <div class="banner-subitem">
+              <h4>Taxi Driving Training</h4>
+              <p>Course to become a UK licensed Taxi Driver.</p>
+            </div>
+          </div>
+        </div>
+
+        <!--Instructor-->
+        <!--Instructor Training-->
+        <div class="banner-card instructor">
+          <div class="banner-icon"></div>
+          <h3>Instructor</h3>
+          <div class="banner-subitems">
+            <div class="banner-subitem">
+              <h4>Become a Driving Instructor</h4>
+              <p>Path to Instructor qualification.</p>
+            </div>
+
+            <div class="banner-subitem">
+              <h4>Join our Instructor Franchise</h4>
+              <p>
+                Franchise opportunities for ambitious trainee and qualified
+                Instructors.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-
-
-      <!--Instructor-->
-      <!--Instructor Training-->
-      <div class="banner-card instructor">
-        <div class="banner-icon"></div>
-        <h3>Instructor</h3>
-        <div class="banner-subitems">
-          <div class="banner-subitem">
-          <h4>Become a Driving Instructor</h4>
-          <p>Path to Instructor qualification.</p>
-          </div>
-
-           <div class="banner-subitem">
-          <h4>Join our Instructor Franchise</h4>
-          <p>Franchise opportunities for ambitious trainee and qualified Instructors.</p>
-          </div>
-      </div>
-      </div>
     </section>
-
-    <!--Google Reviews-->
 
     <div id="footer"></div>
 
     <script>
+      fetch("header.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+        });
       fetch("footer.html")
         .then((res) => res.text())
         .then((data) => {
           document.getElementById("footer").innerHTML = data;
         });
     </script>
-
-    <!-- JS scripts go here -->
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -19,63 +19,55 @@
     <title>Prime Skills Driving / Contact</title>
   </head>
   <body>
-    <button onclick="window.location.href = 'tel:+447881590797'">Call</button>
-    <button
-      type="button"
-      onclick="window.location.href = 'mailto:learnwithprimeskills@gmail.com'"
-    >
-      Email
-    </button>
-    <!-- TODO: move map here and resize, add email link, consider adding WhatsApp integration, add button to book -->
+    <div id="header"></div>
 
-    <form action="#" method="post">
-      <p>
-        <label>
-          Full Name:<br />
-          <input type="text" name="name" required />
-        </label>
-      </p>
-
-      <p>
-        <label>
-          Email:<br />
-          <input type="email" name="email" required />
-        </label>
-      </p>
-
-      <p>
-        <label>
-          Phone Number:<br />
-          <input type="tel" name="phone" placeholder="" />
-        </label>
-      </p>
-
-      <p>
-        <label>
-          Course:<br />
-          <select name="course" required>
-            <option value="">-- Select a course --</option>
-            <option value="new-driver">New Driver</option>
-            <option value="instructor">Instructor</option>
-            <option value="refresher-course">Refresher Course</option>
-            <option value="first-aid-training">First Aid Training</option>
-            <option value="fleet-training">Fleet Training</option>
-            <option value="taxi-driving-training">Taxi Driving Training</option>
-          </select>
-        </label>
-      </p>
-
-      <p>
-        <label>
-          Message:<br />
-          <textarea name="message" rows="5" required></textarea>
-        </label>
-      </p>
-
-      <p>
-        <button type="submit">Send</button>
-      </p>
-    </form>
+    <div>
+      <form action="#" method="post">
+        <div>
+          <label>
+            Full Name:<br />
+            <input type="text" name="name" required />
+          </label>
+        </div>
+        <div>
+          <label>
+            Email:<br />
+            <input type="email" name="email" required />
+          </label>
+        </div>
+        <div>
+          <label>
+            Phone Number:<br />
+            <input type="tel" name="phone" placeholder="" />
+          </label>
+        </div>
+        <div>
+          <label>
+            Course:<br />
+            <select name="course" required>
+              <option value="">-- Select a course --</option>
+              <option value="new-driver">New Driver</option>
+              <option value="instructor">Instructor</option>
+              <option value="refresher-course">Refresher Course</option>
+              <option value="first-aid-training">First Aid Training</option>
+              <option value="fleet-training">Fleet Training</option>
+              <option value="taxi-driving-training">
+                Taxi Driving Training
+              </option>
+            </select>
+          </label>
+        </div>
+        <div>
+          <label>
+            Message:<br />
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+        </div>
+        <div>
+          <button type="submit">Send</button>
+        </div>
+      </form>
+    </div>
 
     <section class="google-map">
       <div class="container">
@@ -100,11 +92,17 @@
     <div id="footer"></div>
 
     <script>
+      fetch("header.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+        });
       fetch("footer.html")
         .then((res) => res.text())
         .then((data) => {
           document.getElementById("footer").innerHTML = data;
         });
     </script>
+    <script src="js/main.js"></script>
   </body>
 </html>
