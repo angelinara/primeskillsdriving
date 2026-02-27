@@ -10,8 +10,9 @@
     <title>Prime Skills Driving / Prices</title>
     <link rel="stylesheet" href="css/my.css" />
   </head>
-
   <body>
+    <div id="header"></div>
+
     <section class="prices">
       <div class="bottom-right">
         <ul class="price-packages">
@@ -43,5 +44,21 @@
         </ul>
       </div>
     </section>
+
+    <div id="footer"></div>
+
+    <script>
+      fetch("header.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+        });
+      fetch("footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+    <script src="js/main.js"></script>
   </body>
 </html>

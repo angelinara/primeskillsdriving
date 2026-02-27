@@ -15,15 +15,8 @@
     <title>Prime Skills Driving / About</title>
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <ul class="menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    <div id="header"></div>
+
     <div>
       <img
         src="images/image.png"
@@ -89,11 +82,17 @@
     <div id="footer"></div>
 
     <script>
+      fetch("header.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+        });
       fetch("footer.html")
         .then((res) => res.text())
         .then((data) => {
           document.getElementById("footer").innerHTML = data;
         });
     </script>
+    <script src="js/main.js"></script>
   </body>
 </html>
