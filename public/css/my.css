@@ -288,13 +288,13 @@ button[onclick]:hover {
   color: #1a1a1a;
 }
 
-/* === About Page === */
-.about-us {
+/* === Basic Styling === */
+.basic {
   max-width: 700px;
   margin-inline: auto;
 }
 
-.about-us p {
+.basic p {
   margin-bottom: 1rem;
   color: #374151;
 }
