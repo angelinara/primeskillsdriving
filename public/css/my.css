@@ -584,3 +584,12 @@ textarea {
     padding-left: 1rem;
   }
 }
+
+.price-note {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.middle ol {
+  list-style-position: inside;
+}
