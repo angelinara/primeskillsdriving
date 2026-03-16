@@ -54,6 +54,33 @@
         </div>
         <div>
           <label>
+            Location:<br />
+            <select
+              name="location"
+              id="location"
+              required
+              onchange="showOtherLocation()"
+            >
+              <option value="">-- Select where you are based --</option>
+              <option value="Maidenhead">Maidenhead</option>
+              <option value="Burnham">Burnham</option>
+              <option value="Slough">Slough</option>
+              <option value="Taplow">Taplow</option>
+              <option value="Windsor">Windsor</option>
+              <option value="Other">Other</option>
+            </select>
+          </label>
+        </div>
+
+        <div id="otherLocationBox" style="display: none">
+          <label>
+            Please specify:<br />
+            <input type="text" id="otherLocation" />
+          </label>
+        </div>
+
+        <div>
+          <label>
             Message:<br />
             <textarea name="message" rows="5" required></textarea>
           </label>

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>&#x1F699;</text></svg>"
+    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Theory test practice with multiple choice questions, hazard perceiption, mock tests and the highway code."
+    />
+    <link rel="stylesheet" href="css/my.css" />
+    <title>Prime Skills Driving / Theory Test Practice</title>
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <section class="learn-to-drive">
+      <div class="top">
+        <h1>Theory Test Practice</h1>
+      </div>
+      <div class="middle">
+        <strong>Theory Test Pro</strong> gives you everything you need to
+        prepare and pass your theory test first time.
+        <ol>
+          <li>
+            <strong>DVSA-style questions</strong>: multiple choice questions to
+            cover all topics.
+          </li>
+          <li>
+            <strong>Hazard Perception</strong>: short video clips of driving
+            situations where you must identify developing hazards.
+          </li>
+          <li>
+            <strong>Mock Tests</strong>: realistic tests that mirror the exam.
+          </li>
+          <li>
+            <strong>Progress Tracking</strong>: track your progress and improve
+            your knowledge with the support of
+            <strong>Prime Skills Driving</strong>.
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="theory-test">
+      <a
+        href="https://learnskills.theorytestpro.co.uk/students/new"
+        target="_blank"
+      >
+        <img src="images/theory-test-pro.png" alt="Theory Test Pro" />
+      </a>
+    </section>
+
+    <section class="driver-starting-guide">
+      <ul class="progress-steps">
+        <li>
+          &#9989; Practice your theory test with the
+          <strong>Theory Test Pro</strong> app (&pound;4.99)
+          <a
+            href="https://learnskills.theorytestpro.co.uk/students/new"
+            class="btn3"
+            target="_blank"
+            >Sign up</a
+          >
+        </li>
+
+        <li>
+          &#128197; Book your Theory Test
+          <a
+            href="https://www.gov.uk/book-theory-test"
+            class="btn2"
+            target="_blank"
+            >Book</a
+          >
+        </li>
+
+        <li>
+          &#128663; Get in touch with us for support and start your driving
+          course
+          <a href="contact.html" class="btn2">Contact</a>
+        </li>
+      </ul>
+    </section>
+
+    <div id="footer"></div>
+
+    <script>
+      fetch("header.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+        });
+      fetch("footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
