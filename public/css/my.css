@@ -384,6 +384,12 @@ blockquote footer {
   margin-bottom: 1.25rem;
 }
 
+.theory-test {
+  padding: 2rem 1.25rem;
+  max-width: 800px;
+  margin-inline: auto;
+}
+
 .progress-steps {
   list-style: none;
   counter-reset: step-counter;
@@ -591,5 +597,9 @@ textarea {
 }
 
 .middle ol {
+  list-style-position: inside;
+}
+.middle ul {
+  list-style-type:disc;
   list-style-position: inside;
 }
