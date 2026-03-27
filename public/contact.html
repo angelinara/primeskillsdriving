@@ -5,6 +5,13 @@
       rel="icon"
       href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>&#x1F699;</text></svg>"
     />
+
+    <script
+      src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+      async
+      defer
+    ></script>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/my.css" />
@@ -105,7 +112,9 @@
             >
               <option value="">-- Select where you are based --</option>
               <option value="Maidenhead">Maidenhead</option>
+              <option value="Ascot">Ascot</option>
               <option value="Burnham">Burnham</option>
+              <option value="Eton">Eton</option>
               <option value="Slough">Slough</option>
               <option value="Taplow">Taplow</option>
               <option value="Windsor">Windsor</option>
@@ -135,6 +144,14 @@
             <a href="privacy.html" target="_blank">privacy policy</a>.
           </label>
         </div>
+
+        <div>
+          <div
+            class="cf-turnstile"
+            data-sitekey="0x4AAAAAACw1mkFNuL-C_8Iv"
+          ></div>
+        </div>
+
         <div>
           <button type="submit">Send</button>
         </div>
