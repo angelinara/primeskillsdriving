@@ -395,6 +395,17 @@ blockquote footer {
   margin-bottom: 1.25rem;
 }
 
+.learn-to-drive p {
+  margin-bottom: 1rem;
+  color: #374151;
+}
+
+.about-image-section {
+  padding: 2rem 1.25rem;
+  max-width: 800px;
+  margin-inline: auto;
+}
+
 .theory-test {
   padding: 2rem 1.25rem;
   max-width: 800px;
