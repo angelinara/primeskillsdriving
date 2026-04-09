@@ -321,6 +321,14 @@ blockquote {
   color: #374151;
 }
 
+.reviews-heading {
+  max-width: 700px;
+  margin: 2rem auto 0.5rem;
+  padding-inline: 1.25rem;
+  font-size: 1.4rem;
+  color: #1a1a1a;
+}
+
 blockquote p {
   margin-bottom: 0.75rem;
 }
@@ -368,6 +376,10 @@ blockquote footer {
 }
 
 /* === Learn to Drive Page === */
+section.learn-to-drive {
+  max-width: 990px;
+}
+
 .learn-to-drive .top h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
