@@ -251,6 +251,16 @@ button[onclick]:hover {
   color: #1d4ed8;
 }
 
+.banner-subitem h4 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.banner-subitem h4 a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
 .banner-card h4 {
   font-size: 0.95rem;
   margin-bottom: 0.4rem;
@@ -274,6 +284,7 @@ button[onclick]:hover {
   border-top: 1px solid #f3f4f6;
   padding-top: 0.75rem;
 }
+
 
 /* === Driving Courses Section === */
 .driving-courses {
@@ -308,6 +319,14 @@ blockquote {
   border-radius: 0 6px 6px 0;
   font-style: italic;
   color: #374151;
+}
+
+.reviews-heading {
+  max-width: 700px;
+  margin: 2rem auto 0.5rem;
+  padding-inline: 1.25rem;
+  font-size: 1.4rem;
+  color: #1a1a1a;
 }
 
 blockquote p {
@@ -357,6 +376,10 @@ blockquote footer {
 }
 
 /* === Learn to Drive Page === */
+section.learn-to-drive {
+  max-width: 990px;
+}
+
 .learn-to-drive .top h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -382,6 +405,17 @@ blockquote footer {
 .driver-starting-guide h2 {
   font-size: 1.5rem;
   margin-bottom: 1.25rem;
+}
+
+.learn-to-drive p {
+  margin-bottom: 1rem;
+  color: #374151;
+}
+
+.about-image-section {
+  padding: 2rem 1.25rem;
+  max-width: 800px;
+  margin-inline: auto;
 }
 
 .theory-test {
