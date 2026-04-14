@@ -342,37 +342,64 @@ blockquote footer {
 
 /* === Prices Page === */
 .prices {
-  padding: 1.5rem 1.25rem;
-  max-width: 700px;
+  padding: 1.25rem;
+  max-width: 900px;
 }
 
-.bottom-right {
-  background-color: #f9fafb;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  padding: 1.5rem;
+.prices + .prices {
+  padding-top: 0.25rem;
+}
+
+.price-heading {
+  font-size: 1.25rem;
+  margin-bottom: 0.9rem;
+  color: #111827;
+  letter-spacing: -0.02em;
 }
 
 .price-packages {
   list-style: none;
   padding: 0;
+  display: grid;
+  gap: 0.75rem;
 }
 
-.price-packages h1 {
-  font-size: 1.2rem;
-  margin-bottom: 0.75rem;
-  color: #1d4ed8;
-}
-
-.price-packages li {
-  padding: 0.35rem 0;
-  border-bottom: 1px solid #f3f4f6;
+.price-package {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) auto auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 1.1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background-color: #fff;
   font-size: 0.95rem;
   color: #374151;
+  line-height: 1.5;
 }
 
-.price-packages li:last-child {
-  border-bottom: none;
+.price-package-name {
+  font-weight: 600;
+  color: #111827;
+}
+
+.price-package-details {
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+.price-package-amount {
+  color: #1d4ed8;
+  font-weight: 700;
+  white-space: nowrap;
+  justify-self: end;
+}
+
+.price-note {
+  text-align: center;
+  padding-top: 0.25rem;
+  font-size: 0.9rem;
+  color: #6b7280;
 }
 
 /* === Learn to Drive Page === */
@@ -623,11 +650,16 @@ textarea {
     border: none;
     padding-left: 1rem;
   }
-}
 
-.price-note {
-  font-size: 0.85rem;
-  color: #777;
+  .price-package {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+
+  .price-package-details,
+  .price-package-amount {
+    justify-self: start;
+  }
 }
 
 .middle ol {
