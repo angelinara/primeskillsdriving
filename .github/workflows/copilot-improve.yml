@@ -1,0 +1,36 @@
+name: Copilot Scheduled Improvement
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 9 */2 * *"
+
+jobs:
+  create-improvement-pr:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Copilot CLI
+        run: npm install -g @github/copilot
+
+      - name: Run Copilot improvement
+        env:
+          GH_TOKEN: ${{ secrets.COPILOT_PAT }}
+        run: |
+          copilot --autopilot --allow-all -p "Explore this repository. It is a static HTML/CSS/JS website for a UK driving school — no build tools, no npm, no framework. Find one small, tightly-scoped improvement (a bug fix, code quality issue, UX problem, or documentation gap) and implement it. Do not open a pull request. When done, write a file called .copilot-pr.md with two sections: a line starting with 'TITLE:' containing a concise descriptive PR title, and the rest as the PR body explaining what the problem is, why it matters, and exactly what was changed."
+
+      - name: Open PR
+        if: steps.improve.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: automated/weekly-improvement
+          commit-message: ${{ steps.improve.outputs.pr_title }}
+          title: ${{ steps.improve.outputs.pr_title }}
+          body: ${{ steps.improve.outputs.pr_body }}
+          delete-branch: true
