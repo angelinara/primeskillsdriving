@@ -3,7 +3,7 @@ name: Copilot Scheduled Improvement
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 9 */2 * *"
+    - cron: "0 9 * * 1"
 
 jobs:
   create-improvement-pr:
@@ -14,13 +14,31 @@ jobs:
       pull-requests: write
 
     steps:
+      - id: cadence
+        name: Check biweekly cadence
+        run: |
+          if [ "${GITHUB_EVENT_NAME}" = "workflow_dispatch" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          week_number=$(date +%V)
+          if [ $((10#$week_number % 2)) -eq 0 ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/checkout@v4
+        if: steps.cadence.outputs.run == 'true'
 
       - name: Install Copilot CLI
+        if: steps.cadence.outputs.run == 'true'
         run: npm install -g @github/copilot
 
       - id: improve
         name: Run Copilot improvement
+        if: steps.cadence.outputs.run == 'true'
         env:
           GH_TOKEN: ${{ secrets.COPILOT_PAT }}
         run: |
@@ -52,7 +70,7 @@ jobs:
           } >> "$GITHUB_OUTPUT"
 
       - name: Open PR
-        if: steps.improve.outputs.changed == 'true'
+        if: steps.cadence.outputs.run == 'true' && steps.improve.outputs.changed == 'true'
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
