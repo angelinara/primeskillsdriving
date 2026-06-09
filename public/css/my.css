@@ -286,6 +286,97 @@ button[onclick]:hover {
 }
 
 
+/* === Quick Nav Section === */
+.quick-nav {
+  background-color: #f9fafb;
+  padding: 3rem 1.25rem;
+  max-width: 100%;
+}
+
+.quick-nav > h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.75rem;
+  color: #1a1a1a;
+}
+
+.quick-nav-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: center;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.quick-nav-card {
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1.75rem 1.5rem;
+  flex: 1 1 240px;
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.quick-nav-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.quick-nav-card .qn-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.quick-nav-card h3 {
+  font-size: 1.1rem;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.quick-nav-card p {
+  font-size: 0.9rem;
+  color: #4b5563;
+  margin: 0;
+  flex: 1;
+}
+
+.quick-nav-card .qn-link {
+  font-size: 0.9rem;
+  color: #1d4ed8;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Insurance card accent */
+.quick-nav-card.accent {
+  border: 2px solid #f59e0b;
+  position: relative;
+}
+
+.quick-nav-card .qn-badge {
+  position: absolute;
+  top: -0.65rem;
+  right: 1rem;
+  background-color: #f59e0b;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+}
+
 /* === Driving Courses Section === */
 .driving-courses {
   padding: 3rem 1.25rem;
