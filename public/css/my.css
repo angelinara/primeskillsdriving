@@ -221,7 +221,7 @@ button[onclick]:hover {
 
 /* === Why Choose Us === */
 .why-choose-us {
-  background-color: #f9fafb;
+  background-color: #dbe7ff;
   padding: 2.5rem 1.25rem;
   max-width: 100%;
 }
@@ -249,6 +249,81 @@ button[onclick]:hover {
   font-size: 1.1rem;
   margin-bottom: 0.75rem;
   color: #1d4ed8;
+}
+
+/* === Why Choose Us cards — solid blue band, no boxes === */
+.why-choose-us .banner-container {
+  gap: 0;
+}
+
+.why-choose-us .banner-card {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 1.5rem 2rem;
+  box-shadow: none;
+  transition: background-color 0.2s ease;
+  position: relative;
+}
+
+.why-choose-us .banner-card:hover {
+  background-color: rgba(29, 78, 216, 0.06);
+  transform: none;
+  box-shadow: none;
+}
+
+/* Vertical divider between cards */
+.why-choose-us .banner-card + .banner-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background-color: rgba(29, 78, 216, 0.2);
+}
+
+.why-choose-us .banner-card .wcu-icon {
+  display: block;
+  font-size: 1.75rem;
+  margin-bottom: 0.65rem;
+  line-height: 1;
+}
+
+.why-choose-us .banner-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 0.4rem;
+}
+
+.why-choose-us .banner-card p {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-bottom: 0;
+}
+
+.why-choose-us a.banner-card {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.why-choose-us a.banner-card:hover {
+  text-decoration: none;
+  color: inherit;
+  background-color: rgba(29, 78, 216, 0.06);
+}
+
+/* Hide dividers on mobile */
+@media (max-width: 640px) {
+  .why-choose-us .banner-card + .banner-card::before {
+    display: none;
+  }
+
+  .why-choose-us .banner-card {
+    padding: 1.25rem 1rem;
+  }
 }
 
 .banner-subitem h4 a {
