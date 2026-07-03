@@ -1,4 +1,9 @@
 /* === Base & Reset === */
+:root {
+  /* Shared width for page heading + main content so their left edges align */
+  --content-width: 900px;
+}
+
 *,
 *::before,
 *::after {
@@ -526,7 +531,7 @@ blockquote footer {
 /* === Prices Page === */
 .prices {
   padding: 1.25rem;
-  max-width: 900px;
+  max-width: var(--content-width);
 }
 
 .prices + .prices {
@@ -594,7 +599,7 @@ blockquote footer {
 
 /* === Learn to Drive Page === */
 section.learn-to-drive {
-  max-width: 990px;
+  max-width: var(--content-width);
 }
 
 .learn-to-drive .top h1 {
@@ -614,7 +619,15 @@ section.learn-to-drive {
 }
 
 .contact-us {
+  max-width: var(--content-width);
   padding-top: 1rem;
+}
+
+/* Left-align the form under the heading at a comfortable width */
+.contact-us form {
+  max-width: 640px;
+  margin-inline: 0;
+  padding-inline: 0;
 }
 
 .learn-to-drive .middle {
@@ -652,7 +665,7 @@ section.learn-to-drive {
 
 .theory-test {
   padding: 2rem 1.25rem;
-  max-width: 800px;
+  max-width: var(--content-width);
   margin-inline: auto;
 }
 
@@ -872,7 +885,7 @@ textarea {
 
 .insurance-options {
   color: #374151;
-  max-width: 900px;
+  max-width: var(--content-width);
   margin: 1rem auto 3rem;
   padding: 0 1.25rem;
   display: grid;
