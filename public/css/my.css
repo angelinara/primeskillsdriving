@@ -602,6 +602,21 @@ section.learn-to-drive {
   margin-bottom: 1rem;
 }
 
+/* Tighten the gap between a page heading and the section directly below it */
+.contact-heading,
+.page-heading {
+  padding-bottom: 0;
+}
+
+.contact-heading .top h1,
+.page-heading .top h1 {
+  margin-bottom: 0;
+}
+
+.contact-us {
+  padding-top: 1rem;
+}
+
 .learn-to-drive .middle {
   background-color: #f9fafb;
   border: 1px solid #e5e7eb;
@@ -858,7 +873,7 @@ textarea {
 .insurance-options {
   color: #374151;
   max-width: 900px;
-  margin: 3rem auto;
+  margin: 1rem auto 3rem;
   padding: 0 1.25rem;
   display: grid;
   gap: 2rem;
