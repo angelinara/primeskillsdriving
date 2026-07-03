@@ -713,6 +713,15 @@ section.learn-to-drive {
   max-width: var(--content-width);
 }
 
+/* Tighten the gap between the intro and the step boxes */
+.instructor-path {
+  padding-bottom: 0.5rem;
+}
+
+.instructor-steps-section {
+  padding-top: 0.75rem;
+}
+
 .instructor-path .top {
   margin-bottom: 1.5rem;
 }
