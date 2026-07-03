@@ -489,8 +489,13 @@ button[onclick]:hover {
 
 /* === Basic Styling === */
 .basic {
-  max-width: 700px;
+  max-width: var(--content-width);
   margin-inline: auto;
+}
+
+/* Keep policy text at a readable line length while the column left edge aligns */
+.basic p {
+  max-width: 70ch;
 }
 
 .basic p {
@@ -703,6 +708,11 @@ section.learn-to-drive {
 }
 
 /* === Instructor Page === */
+.instructor-path,
+.instructor-steps-section {
+  max-width: var(--content-width);
+}
+
 .instructor-path .top {
   margin-bottom: 1.5rem;
 }
