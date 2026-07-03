@@ -74,6 +74,51 @@ section {
   margin-inline: auto;
 }
 
+/* === Breadcrumbs === */
+.breadcrumb {
+  max-width: var(--content-width);
+  margin-inline: auto;
+  padding: 1.25rem 1.25rem 0;
+  font-size: 0.85rem;
+}
+
+.breadcrumb ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+  color: #6b7280;
+}
+
+.breadcrumb li:not(:first-child)::before {
+  content: "/";
+  margin: 0 0.5rem;
+  color: #9ca3af;
+}
+
+.breadcrumb a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb [aria-current="page"] {
+  color: #6b7280;
+}
+
+/* Pull the first section up under the breadcrumb */
+.breadcrumb + section {
+  padding-top: 1rem;
+}
+
 /* === Navbar === */
 .navbar {
   background-color: #fff;

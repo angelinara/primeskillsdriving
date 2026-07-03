@@ -73,9 +73,27 @@
         }
       }
     </script>
+    <!-- Structured data: breadcrumb -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.primeskillsdriving.co.uk/" },
+          { "@type": "ListItem", "position": 2, "name": "Learn to Drive", "item": "https://www.primeskillsdriving.co.uk/learntodrive.html" }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="header"></div>
+
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li aria-current="page">Learn to Drive</li>
+      </ol>
+    </nav>
 
     <section class="learn-to-drive">
       <div class="top">
