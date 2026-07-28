@@ -295,7 +295,7 @@ button[onclick]:hover {
   max-width: 320px;
 }
 
-.banner-card h3 {
+.banner-card h2 {
   font-size: 1.1rem;
   margin-bottom: 0.75rem;
   color: #1d4ed8;
@@ -340,7 +340,7 @@ button[onclick]:hover {
   line-height: 1;
 }
 
-.why-choose-us .banner-card h3 {
+.why-choose-us .banner-card h2 {
   font-size: 1rem;
   font-weight: 700;
   color: #1e3a8a;
