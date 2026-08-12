@@ -659,9 +659,6 @@ button[onclick]:hover {
 /* Keep policy text at a readable line length while the column left edge aligns */
 .basic p {
   max-width: 70ch;
-}
-
-.basic p {
   margin-bottom: 1rem;
   color: #374151;
 }
