@@ -55,6 +55,37 @@ async function loadReviews() {
 
       container.appendChild(card);
     });
+
+    // Cards arrive after the browser has already handled any #hash, so a link
+    // to #reviews would otherwise leave the visitor at the top of the page.
+    // The fetched header/footer and the lazy image also settle around now and
+    // grow the page above the target, so keep re-aligning until it stops
+    // moving rather than scrolling once.
+    if (location.hash === "#reviews") {
+      const target = document.getElementById("reviews");
+      let frames = 0;
+      let cancelled = false;
+
+      // Hand control back the moment the visitor scrolls themselves.
+      const cancel = () => {
+        cancelled = true;
+      };
+      ["wheel", "touchstart", "keydown"].forEach((event) =>
+        window.addEventListener(event, cancel, { once: true, passive: true }),
+      );
+
+      const settle = () => {
+        if (cancelled || !target) return;
+        // "instant", not "auto": "auto" defers to the global
+        // scroll-behavior: smooth, and each frame would cancel the last.
+        target.scrollIntoView({ behavior: "instant", block: "start" });
+        // Re-align for a short window rather than stopping at the first hit —
+        // the header and image can shift the target either way after we land.
+        if (frames++ < 40) requestAnimationFrame(settle);
+      };
+
+      settle();
+    }
   } catch (error) {
     console.error("Error loading reviews:", error);
   }

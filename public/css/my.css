@@ -855,6 +855,112 @@ section.learn-to-drive {
   margin-bottom: 1rem;
 }
 
+/* === Google review summary (home page) === */
+.reviews-summary {
+  padding: 3rem 1.25rem 2rem;
+  max-width: 1100px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.reviews-summary h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+  color: #1a1a1a;
+}
+
+.rating-score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.rating-stars {
+  color: #f5b50a;
+  font-size: 1.35rem;
+  letter-spacing: 0.1em;
+}
+
+.rating-value {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.rating-count {
+  margin-top: 0.35rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.mentions-label {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6b7280;
+}
+
+.mentions-list {
+  margin-top: 0.9rem;
+}
+
+.reviews-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1d4ed8;
+}
+
+.reviews-more::after {
+  content: "\2192";
+  transition: transform 0.15s;
+}
+
+.reviews-more:hover::after {
+  transform: translateX(2px);
+}
+
+/* === Areas We Cover (home page) === */
+.areas-covered {
+  padding: 0 1.25rem 3rem;
+  max-width: 1100px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.areas-covered h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+  color: #1a1a1a;
+}
+
+/* Shared tag treatment for the review topics and the towns: a hairline
+   outline on the page background, borrowing the card border colour rather
+   than adding a new accent. */
+.mentions-list,
+.areas-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.mentions-list li,
+.areas-list li {
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
 /* === Instructor Page === */
 .instructor-path,
 .instructor-steps-section {

@@ -60,7 +60,10 @@
 
     <!-- Meta Tags Generated via https://heymeta.com -->
 
-    <!-- Structured data: local business + aggregate rating -->
+    <!-- Structured data: local business.
+         No aggregateRating: a LocalBusiness rating about itself, on its own
+         site, is ineligible for Google's star review feature.
+         https://developers.google.com/search/docs/appearance/structured-data/review-snippet -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -77,6 +80,9 @@
           "Windsor",
           "Eton",
           "Slough",
+          "Henley",
+          "Cookham",
+          "Beaconsfield",
           "Ascot",
           "Burnham",
           "Taplow"
@@ -86,13 +92,6 @@
           "addressLocality": "Maidenhead",
           "addressRegion": "Berkshire",
           "addressCountry": "GB"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "151",
-          "bestRating": "5",
-          "worstRating": "1"
         }
       }
     </script>
@@ -309,6 +308,47 @@
           </ul>
         </li>
       </ol>
+    </section>
+
+    <section class="reviews-summary">
+      <h2>What Our Students Say</h2>
+      <p class="rating-score">
+        <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="rating-value">5.0</span>
+      </p>
+      <p class="rating-count">Based on 165 Google reviews</p>
+
+      <p class="mentions-label">Most mentioned</p>
+      <ul class="mentions-list">
+        <li>Confidence building</li>
+        <li>Passing first time</li>
+        <li>Passing test</li>
+        <li>Driving test preparation</li>
+        <li>Test booking</li>
+        <li>Tailored lessons</li>
+        <li>Intensive course</li>
+        <li>Flexible scheduling</li>
+        <li>Insightful instructor</li>
+        <li>Constructive feedback</li>
+      </ul>
+
+      <a href="about.html#reviews" class="reviews-more">Read our reviews</a>
+    </section>
+
+    <section class="areas-covered">
+      <h2>Areas We Cover</h2>
+      <ul class="areas-list">
+        <li>Maidenhead</li>
+        <li>Windsor</li>
+        <li>Eton</li>
+        <li>Slough</li>
+        <li>Henley</li>
+        <li>Cookham</li>
+        <li>Beaconsfield</li>
+        <li>Ascot</li>
+        <li>Burnham</li>
+        <li>Taplow</li>
+      </ul>
     </section>
 
     <div id="footer"></div>
