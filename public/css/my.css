@@ -1004,9 +1004,107 @@ section.learn-to-drive {
   line-height: 1.7;
 }
 
+/* Step links, matching the arrow links on the home page cards */
 .instructor-steps li a {
-  margin-left: 0.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1d4ed8;
 }
+
+.instructor-steps li a::after {
+  content: "\2192";
+  transition: transform 0.15s;
+}
+
+.instructor-steps li a:hover::after {
+  transform: translateX(2px);
+}
+
+/* FAQ accordion */
+.instructor-faq h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.faq-list details {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.7;
+}
+
+.faq-list summary {
+  padding: 0.9rem 2.75rem 0.9rem 1.1rem;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list summary h3 {
+  display: inline;
+  font-size: 0.95rem;
+}
+
+/* Chevron, rotates when the answer is open */
+.faq-list summary::after {
+  content: "";
+  position: absolute;
+  right: 1.25rem;
+  top: 1.15rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid #6b7280;
+  border-bottom: 2px solid #6b7280;
+  transform: rotate(45deg);
+  transition: transform 0.15s;
+}
+
+.faq-list details[open] summary {
+  padding-bottom: 0.35rem;
+}
+
+.faq-list details[open] summary::after {
+  transform: rotate(-135deg);
+  top: 1.3rem;
+}
+
+.faq-list details p,
+.faq-list details ul {
+  padding: 0 1.1rem 0.9rem;
+}
+
+.faq-list details ul {
+  list-style: none;
+}
+
+.faq-list details li {
+  position: relative;
+  padding-left: 0.9rem;
+}
+
+.faq-list details li::before {
+  content: "\2013";
+  position: absolute;
+  left: 0;
+  color: #9ca3af;
+}
+
 
 /* === Contact Page === */
 form {
