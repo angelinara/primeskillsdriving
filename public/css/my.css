@@ -855,11 +855,13 @@ section.learn-to-drive {
   margin-bottom: 1rem;
 }
 
-/* === Google review summary (home page) === */
+/* === Google review summary (home page) ===
+   Centred on a full-bleed tinted band, following the page's existing rule:
+   tinted band = centred, plain white content column = left-aligned. */
 .reviews-summary {
-  padding: 3rem 1.25rem 2rem;
-  max-width: 1100px;
-  margin-inline: auto;
+  background-color: #f9fafb;
+  padding: 3rem 1.25rem;
+  max-width: 100%;
   text-align: center;
 }
 
@@ -903,8 +905,11 @@ section.learn-to-drive {
   color: #6b7280;
 }
 
+/* The band runs full width, so hold the tags to the content column */
 .mentions-list {
   margin-top: 0.9rem;
+  max-width: 900px;
+  margin-inline: auto;
 }
 
 .reviews-more {
@@ -926,18 +931,24 @@ section.learn-to-drive {
   transform: translateX(2px);
 }
 
-/* === Areas We Cover (home page) === */
+/* === Areas We Cover (home page) ===
+   A closing footnote, not a peer of the main sections: the h2 stays for
+   document structure but is styled down to match the "Most mentioned"
+   label so it doesn't compete with the two section headings above. */
 .areas-covered {
-  padding: 0 1.25rem 3rem;
+  padding: 2.5rem 1.25rem 3rem;
   max-width: 1100px;
   margin-inline: auto;
   text-align: center;
 }
 
 .areas-covered h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1.25rem;
-  color: #1a1a1a;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+  color: #6b7280;
 }
 
 /* Shared tag treatment for the review topics and the towns: a hairline
