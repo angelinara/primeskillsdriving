@@ -191,7 +191,6 @@ section {
 .btn1,
 .btn2,
 .btn3,
-.btn-secondary,
 button[type="submit"],
 button[onclick] {
   display: inline-block;
@@ -220,17 +219,6 @@ button[onclick]:hover {
   background-color: #1e40af;
   text-decoration: none;
   color: #fff;
-}
-
-.btn-secondary {
-  background-color: #fff;
-  color: #1d4ed8;
-  border: 1px solid #1d4ed8;
-}
-
-.btn-secondary:hover {
-  background-color: #eff6ff;
-  text-decoration: none;
 }
 
 .btn1,
@@ -1098,20 +1086,6 @@ textarea {
   width: 100%;
   border-radius: 8px;
   display: block;
-}
-
-.text-link {
-  color: inherit;
-  text-decoration: none;
-}
-
-.text-link:hover {
-  text-decoration: none;
-}
-
-.arrow {
-  margin-left: 6px;
-  color: #2563eb;
 }
 
 /* === reviews === */
