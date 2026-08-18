@@ -1356,10 +1356,36 @@ textarea {
   margin: 8px 0;
 }
 
+/* Clamped to six lines so cards in a grid row stay a consistent height;
+   the toggle below lifts the clamp. Full text stays in the DOM. */
 .review-text {
   font-size: 14px;
   color: #444;
   line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.review-card.is-expanded .review-text {
+  -webkit-line-clamp: unset;
+}
+
+.review-more {
+  margin-top: 0.6rem;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1d4ed8;
+  cursor: pointer;
+}
+
+.review-more:hover {
+  text-decoration: underline;
 }
 
 

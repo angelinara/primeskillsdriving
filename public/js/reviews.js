@@ -56,6 +56,37 @@ async function loadReviews() {
       container.appendChild(card);
     });
 
+    // Long reviews are clamped by CSS; give only the ones that actually
+    // overflow a toggle, so short reviews don't get a pointless button.
+    container.querySelectorAll(".review-card").forEach((card, index) => {
+      const text = card.querySelector(".review-text");
+
+      // scrollHeight matches clientHeight under -webkit-line-clamp, so lift
+      // the clamp briefly to find out whether the text is actually cut off.
+      const clampedHeight = text.clientHeight;
+      text.style.webkitLineClamp = "unset";
+      const fullHeight = text.scrollHeight;
+      text.style.webkitLineClamp = "";
+      if (fullHeight <= clampedHeight + 2) return;
+
+      text.id = `review-text-${index}`;
+
+      const toggle = document.createElement("button");
+      toggle.type = "button";
+      toggle.className = "review-more";
+      toggle.textContent = "Read more";
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-controls", text.id);
+
+      toggle.addEventListener("click", () => {
+        const expanded = card.classList.toggle("is-expanded");
+        toggle.textContent = expanded ? "Show less" : "Read more";
+        toggle.setAttribute("aria-expanded", String(expanded));
+      });
+
+      card.appendChild(toggle);
+    });
+
     // Cards arrive after the browser has already handled any #hash, so a link
     // to #reviews would otherwise leave the visitor at the top of the page.
     // The fetched header/footer and the lazy image also settle around now and
