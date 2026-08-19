@@ -91,21 +91,37 @@
             },
             {
               "@type": "Offer",
-              "name": "Classic Package (20-30 hours)",
+              "name": "Classic Package (20 hours)",
               "priceSpecification": {
                 "@type": "PriceSpecification",
-                "minPrice": "960",
-                "maxPrice": "1410",
+                "price": "960",
                 "priceCurrency": "GBP"
               }
             },
             {
               "@type": "Offer",
-              "name": "Full Confidence Course (40-60 hours)",
+              "name": "Classic Package (30 hours)",
               "priceSpecification": {
                 "@type": "PriceSpecification",
-                "minPrice": "1840",
-                "maxPrice": "2580",
+                "price": "1410",
+                "priceCurrency": "GBP"
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Full Confidence Course (40 hours)",
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": "1840",
+                "priceCurrency": "GBP"
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Full Confidence Course (60 hours)",
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": "2580",
                 "priceCurrency": "GBP"
               }
             },
@@ -191,34 +207,56 @@
       <ul class="price-packages">
         <li class="price-package">
           <span class="price-package-name">Pay as You Go</span>
-          <span class="price-package-details">2 hours</span>
-          <span class="price-package-amount">&pound;100</span>
+          <ul class="price-tiers">
+            <li class="price-tier">
+              <span class="price-tier-hours">2 hours</span>
+              <span class="price-tier-amount">&pound;100</span>
+            </li>
+          </ul>
         </li>
         <li class="price-package">
           <span class="price-package-name">Starter Package</span>
-          <span class="price-package-details">10 hours</span>
-          <span class="price-package-amount">&pound;490</span>
+          <ul class="price-tiers">
+            <li class="price-tier">
+              <span class="price-tier-hours">10 hours</span>
+              <span class="price-tier-amount">&pound;490</span>
+            </li>
+          </ul>
         </li>
         <li class="price-package">
           <span class="price-package-name">Classic Package</span>
-          <span class="price-package-details">20&ndash;30 hours</span>
-          <span class="price-package-amount"
-            >&pound;960&ndash;&pound;1,410</span
-          >
+          <ul class="price-tiers">
+            <li class="price-tier">
+              <span class="price-tier-hours">20 hours</span>
+              <span class="price-tier-amount">&pound;960</span>
+            </li>
+            <li class="price-tier">
+              <span class="price-tier-hours">30 hours</span>
+              <span class="price-tier-amount">&pound;1,410</span>
+            </li>
+          </ul>
         </li>
         <li class="price-package">
-          <span class="price-package-name">Full Confidence Courses</span>
-          <span class="price-package-details">40&ndash;60 hours</span>
-          <span class="price-package-amount"
-            >&pound;1,840&ndash;&pound;2,580</span
-          >
+          <span class="price-package-name">Full Confidence Course</span>
+          <ul class="price-tiers">
+            <li class="price-tier">
+              <span class="price-tier-hours">40 hours</span>
+              <span class="price-tier-amount">&pound;1,840</span>
+            </li>
+            <li class="price-tier">
+              <span class="price-tier-hours">60 hours</span>
+              <span class="price-tier-amount">&pound;2,580</span>
+            </li>
+          </ul>
         </li>
         <li class="price-package">
           <span class="price-package-name">Driving Test Car</span>
-          <span class="price-package-details">Hire a car for your driving test</span>
-          <span class="price-package-amount"
-            >&pound;150</span
-          >
+          <ul class="price-tiers">
+            <li class="price-tier">
+              <span class="price-tier-hours">Test day hire</span>
+              <span class="price-tier-amount">&pound;150</span>
+            </li>
+          </ul>
         </li>
       </ul>
     </section>
@@ -228,8 +266,12 @@
       <ul class="price-packages price-packages-single">
         <li class="price-package">
           <span class="price-package-name">Taxi Training</span>
-          <span class="price-package-details">Per lesson</span>
-          <span class="price-package-amount">&pound;70</span>
+          <ul class="price-tiers">
+            <li class="price-tier">
+              <span class="price-tier-hours">Per lesson</span>
+              <span class="price-tier-amount">&pound;70</span>
+            </li>
+          </ul>
         </li>
       </ul>
     </section>
@@ -239,18 +281,30 @@
       <ul class="price-packages">
         <li class="price-package">
           <span class="price-package-name">Starter Package</span>
-          <span class="price-package-details">5 hours</span>
-          <span class="price-package-amount">&pound;325</span>
+          <ul class="price-tiers">
+            <li class="price-tier">
+              <span class="price-tier-hours">5 hours</span>
+              <span class="price-tier-amount">&pound;325</span>
+            </li>
+          </ul>
         </li>
         <li class="price-package">
           <span class="price-package-name">Classic Package</span>
-          <span class="price-package-details">20 hours</span>
-          <span class="price-package-amount">&pound;1200</span>
+          <ul class="price-tiers">
+            <li class="price-tier">
+              <span class="price-tier-hours">20 hours</span>
+              <span class="price-tier-amount">&pound;1,200</span>
+            </li>
+          </ul>
         </li>
         <li class="price-package">
           <span class="price-package-name">Advanced Package</span>
-          <span class="price-package-details">40 hours</span>
-          <span class="price-package-amount">&pound;2200</span>
+          <ul class="price-tiers">
+            <li class="price-tier">
+              <span class="price-tier-hours">40 hours</span>
+              <span class="price-tier-amount">&pound;2,200</span>
+            </li>
+          </ul>
         </li>
       </ul>
     </section>
