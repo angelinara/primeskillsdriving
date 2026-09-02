@@ -859,18 +859,6 @@ section.learn-to-drive {
   margin-left: 0.5rem;
 }
 
-.bottom.banner {
-  background-color: #f0f4ff;
-  text-align: center;
-  padding: 2.5rem 1.25rem;
-  max-width: 100%;
-}
-
-.bottom.banner h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
 /* === Google review summary (home page) ===
    Centred on a full-bleed tinted band, following the page's existing rule:
    tinted band = centred, plain white content column = left-aligned. */
