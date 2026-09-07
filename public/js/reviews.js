@@ -20,6 +20,15 @@ async function loadReviews() {
 
     const starMap = { ONE: 1, TWO: 2, THREE: 3, FOUR: 4, FIVE: 5 };
 
+    // Review text and reviewer names come from Google's review API, not from
+    // us — escape before interpolating into innerHTML so a review containing
+    // HTML/script markup can't execute on the page.
+    function escapeHtml(str) {
+      const div = document.createElement("div");
+      div.textContent = str ?? "";
+      return div.innerHTML;
+    }
+
     function generateStars(starRating) {
       const count = starMap[starRating] || 0;
       return "★".repeat(count) + "☆".repeat(5 - count);
@@ -46,11 +55,11 @@ async function loadReviews() {
 
       card.innerHTML = `
         <div class="review-header">
-          <span class="reviewer-name">${review.reviewer.displayName}</span>
+          <span class="reviewer-name">${escapeHtml(review.reviewer.displayName)}</span>
           <span class="review-date">${formatDate(review.createTime)}</span>
         </div>
         <div class="stars">${generateStars(review.starRating)}</div>
-        <p class="review-text">${review.comment}</p>
+        <p class="review-text">${escapeHtml(review.comment)}</p>
       `;
 
       container.appendChild(card);
