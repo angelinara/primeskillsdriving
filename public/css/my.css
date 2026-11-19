@@ -1714,6 +1714,10 @@ textarea {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .promo-arrow {
+    transition: none;
+  }
+
   .checklist-bar,
   .checklist-car,
   .checklist label,
@@ -1741,5 +1745,344 @@ textarea {
 
   .checklist-group {
     break-inside: avoid;
+  }
+}
+
+/* === Christmas promo banner (header.html) === */
+.promo-banner {
+  position: relative;
+  padding: 0.7rem 3rem;
+  background-color: #a3122b;
+  /* scattered white twinkle sparkles over a soft red shine */
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cpath d='M14,14.5 C14.99,19.01 14.99,19.01 19.5,20 C14.99,20.99 14.99,20.99 14,25.5 C13.01,20.99 13.01,20.99 8.5,20 C13.01,19.01 13.01,19.01 14,14.5 Z' fill='%23fff' fill-opacity='0.24'/%3E%3Cpath d='M22,9.4 C22.468,11.532 22.468,11.532 24.6,12 C22.468,12.468 22.468,12.468 22,14.6 C21.532,12.468 21.532,12.468 19.4,12 C21.532,11.532 21.532,11.532 22,9.4 Z' fill='%23fff' fill-opacity='0.2'/%3E%3Cpath d='M21,25.4 C21.288,26.712 21.288,26.712 22.6,27 C21.288,27.288 21.288,27.288 21,28.6 C20.712,27.288 20.712,27.288 19.4,27 C20.712,26.712 20.712,26.712 21,25.4 Z' fill='%23fff' fill-opacity='0.16'/%3E%3Cpath d='M56,51 C56.9,55.1 56.9,55.1 61,56 C56.9,56.9 56.9,56.9 56,61 C55.1,56.9 55.1,56.9 51,56 C55.1,55.1 55.1,55.1 56,51 Z' fill='%23fff' fill-opacity='0.22'/%3E%3Cpath d='M63,45.6 C63.432,47.568 63.432,47.568 65.4,48 C63.432,48.432 63.432,48.432 63,50.4 C62.568,48.432 62.568,48.432 60.6,48 C62.568,47.568 62.568,47.568 63,45.6 Z' fill='%23fff' fill-opacity='0.18'/%3E%3Cpath d='M49,62.5 C49.27,63.73 49.27,63.73 50.5,64 C49.27,64.27 49.27,64.27 49,65.5 C48.73,64.27 48.73,64.27 47.5,64 C48.73,63.73 48.73,63.73 49,62.5 Z' fill='%23fff' fill-opacity='0.15'/%3E%3Cpath d='M62,13.8 C62.396,15.604 62.396,15.604 64.2,16 C62.396,16.396 62.396,16.396 62,18.2 C61.604,16.396 61.604,16.396 59.8,16 C61.604,15.604 61.604,15.604 62,13.8 Z' fill='%23fff' fill-opacity='0.15'/%3E%3Cpath d='M18,64 C18.36,65.64 18.36,65.64 20,66 C18.36,66.36 18.36,66.36 18,68 C17.64,66.36 17.64,66.36 16,66 C17.64,65.64 17.64,65.64 18,64 Z' fill='%23fff' fill-opacity='0.13'/%3E%3C/svg%3E"),
+    linear-gradient(180deg, #bb1a35, #9a0f26);
+  background-size:
+    80px 80px,
+    100% 100%;
+  color: #fff;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.promo-text strong {
+  letter-spacing: 0.02em;
+}
+
+.promo-text {
+  margin: 0;
+}
+
+.promo-action {
+  white-space: nowrap;
+}
+
+.promo-code {
+  font: inherit;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #fff;
+  background: transparent;
+  border: 1.5px dashed #fff;
+  border-radius: 4px;
+  padding: 0.05rem 0.5rem;
+  margin: 0 0.35rem 0 0.15rem;
+  cursor: pointer;
+}
+
+.promo-code:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.promo-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #fff;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.promo-cta:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ribbon that loops like a bow and ends in an arrow */
+.promo-arrow {
+  width: 4.6rem;
+  height: 2rem;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.2s ease;
+}
+
+.promo-arrow .promo-arrow-fill {
+  fill: #fff;
+  stroke: none;
+}
+
+/* soft red folds inside the loops */
+.promo-arrow .promo-arrow-fold {
+  fill: #a3122b;
+  fill-opacity: 0.28;
+  stroke: none;
+}
+
+.promo-cta:hover .promo-arrow,
+.promo-cta:focus-visible .promo-arrow {
+  transform: translateX(4px);
+}
+
+.promo-close {
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: #fff;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.promo-close:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.promo-code:focus-visible,
+.promo-cta:focus-visible,
+.promo-close:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* === Christmas hero (index.html): holds the Santa scene === */
+.gift-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.gift-wrap .intro {
+  position: relative;
+  z-index: 2;
+}
+
+.promo-hidden .promo-banner {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .promo-banner {
+    padding: 0.7rem 2.75rem 0.7rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .promo-arrow {
+    width: 3.6rem;
+    height: 1.6rem;
+  }
+}
+
+@media print {
+  .promo-banner {
+    display: none;
+  }
+}
+
+/* === Christmas scene on the home hero: Santa loads the car and drives off === */
+.gift-wrap {
+  padding-bottom: 8rem;
+}
+
+.xmas-scene {
+  position: absolute;
+  left: 50%;
+  bottom: 1.25rem;
+  width: 300px;
+  height: 82px;
+  transform: translateX(-50%);
+  overflow: visible;
+  pointer-events: none;
+  animation: xmas-scene 14s linear infinite;
+}
+
+.xmas-scene * {
+  animation-duration: 14s;
+  animation-iteration-count: infinite;
+}
+
+.xmas-present {
+  animation-name: xmas-present;
+}
+
+.xmas-boot-presents {
+  animation-name: xmas-boot-presents;
+}
+
+@keyframes xmas-boot-presents {
+  0%, 22% { transform: translateY(0); opacity: 1; }
+  27%, 89% { transform: translateY(8px); opacity: 0; }
+  90%, 100% { transform: translateY(0); opacity: 1; }
+}
+
+.xmas-lid {
+  transform-box: fill-box;
+  transform-origin: right center;
+  transform: rotate(70deg);
+  animation-name: xmas-lid;
+}
+
+.xmas-santa {
+  animation-name: xmas-santa;
+}
+
+.xmas-santa-bob {
+  animation: xmas-bob 0.35s ease-in-out infinite alternate;
+}
+
+.xmas-driver {
+  opacity: 0;
+  animation-name: xmas-driver;
+}
+
+.xmas-car {
+  animation-name: xmas-car;
+}
+
+.xmas-wheel {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation-name: xmas-wheel;
+}
+
+.xmas-sparkles path {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: xmas-twinkle 1.8s ease-in-out infinite alternate;
+}
+
+.xmas-sparkles path:nth-child(2) { animation-delay: -0.6s; }
+.xmas-sparkles path:nth-child(3) { animation-delay: -1.2s; }
+.xmas-sparkles path:nth-child(4) { animation-delay: -0.9s; }
+
+@keyframes xmas-twinkle {
+  from { opacity: 0.25; scale: 0.6; }
+  to { opacity: 1; scale: 1.1; }
+}
+
+.xmas-exhaust {
+  fill: #e5e7eb;
+  opacity: 0;
+  animation-name: xmas-exhaust;
+}
+
+/* 0-8% idle · 8-22% present into the boot · 22-28% boot shuts
+   28-42% Santa walks to the door · 42-46% he gets in · 48-75% drive off
+   86-90% scene fades and resets out of sight */
+@keyframes xmas-scene {
+  0% { opacity: 0; }
+  4%, 86% { opacity: 1; }
+  88%, 100% { opacity: 0; }
+}
+
+@keyframes xmas-present {
+  0%, 8% { transform: translate(0, 0); opacity: 1; }
+  13% { transform: translate(16px, -22px); opacity: 1; }
+  18% { transform: translate(31px, -14px); opacity: 1; }
+  21% { transform: translate(31px, -6px); opacity: 1; }
+  26% { transform: translate(31px, 6px); opacity: 0; }
+  89% { transform: translate(31px, 6px); opacity: 0; }
+  90%, 100% { transform: translate(0, 0); opacity: 1; }
+}
+
+@keyframes xmas-lid {
+  0%, 22% { transform: rotate(70deg); }
+  28%, 89% { transform: rotate(0deg); }
+  90%, 100% { transform: rotate(70deg); }
+}
+
+@keyframes xmas-santa {
+  0%, 28% { transform: translateX(0); opacity: 1; }
+  42% { transform: translateX(150px); opacity: 1; }
+  46%, 89% { transform: translateX(150px); opacity: 0; }
+  90%, 100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes xmas-bob {
+  from { transform: translateY(0); }
+  to { transform: translateY(-1.5px); }
+}
+
+@keyframes xmas-driver {
+  0%, 43% { opacity: 0; }
+  46%, 87% { opacity: 1; }
+  89%, 100% { opacity: 0; }
+}
+
+@keyframes xmas-car {
+  0%, 48% {
+    transform: translateX(0);
+    animation-timing-function: cubic-bezier(0.55, 0, 1, 0.6);
+  }
+  75%, 89% { transform: translateX(2600px); }
+  90%, 100% { transform: translateX(0); }
+}
+
+@keyframes xmas-wheel {
+  0%, 48% {
+    transform: rotate(0deg);
+    animation-timing-function: cubic-bezier(0.55, 0, 1, 0.6);
+  }
+  75%, 89% { transform: rotate(2880deg); }
+  90%, 100% { transform: rotate(0deg); }
+}
+
+@keyframes xmas-exhaust {
+  0%, 46% { opacity: 0; transform: translateX(0); }
+  50% { opacity: 0.9; transform: translateX(-6px); }
+  56%, 100% { opacity: 0; transform: translateX(-14px); }
+}
+
+.promo-hidden .xmas-scene {
+  display: none;
+}
+
+.promo-hidden .gift-wrap {
+  padding-bottom: 5rem;
+}
+
+@media (max-width: 640px) {
+  .gift-wrap {
+    padding-bottom: 7rem;
+  }
+
+  .xmas-scene {
+    width: 250px;
+    height: 69px;
+  }
+}
+
+/* Still picture for people who prefer less motion: boot shut, Santa by the car */
+@media (prefers-reduced-motion: reduce) {
+  .xmas-scene,
+  .xmas-scene * {
+    animation: none !important;
+  }
+
+  .xmas-scene {
+    opacity: 1;
+  }
+
+  .xmas-lid {
+    transform: none;
   }
 }
