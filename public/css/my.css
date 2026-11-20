@@ -1862,29 +1862,14 @@ textarea {
   transform: translateX(4px);
 }
 
+/* the banner no longer has a close button; hide it if a browser still has an old
+   cached header.html */
 .promo-close {
-  position: absolute;
-  top: 50%;
-  right: 0.5rem;
-  transform: translateY(-50%);
-  width: 2rem;
-  height: 2rem;
-  font-size: 1.4rem;
-  line-height: 1;
-  color: #fff;
-  background: none;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.promo-close:hover {
-  background: rgba(255, 255, 255, 0.15);
+  display: none;
 }
 
 .promo-code:focus-visible,
-.promo-cta:focus-visible,
-.promo-close:focus-visible {
+.promo-cta:focus-visible {
   outline: 2px solid #fff;
   outline-offset: 2px;
 }
@@ -1906,7 +1891,7 @@ textarea {
 
 @media (max-width: 640px) {
   .promo-banner {
-    padding: 0.7rem 2.75rem 0.7rem 1rem;
+    padding: 0.7rem 1rem;
     font-size: 0.9rem;
   }
 
@@ -2092,21 +2077,5 @@ textarea {
   .xmas-scene {
     width: 250px;
     height: 69px;
-  }
-}
-
-/* Still picture for people who prefer less motion: boot shut, Santa by the car */
-@media (prefers-reduced-motion: reduce) {
-  .xmas-scene,
-  .xmas-scene * {
-    animation: none !important;
-  }
-
-  .xmas-scene {
-    opacity: 1;
-  }
-
-  .xmas-lid {
-    transform: none;
   }
 }
