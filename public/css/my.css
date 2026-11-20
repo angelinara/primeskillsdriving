@@ -2,6 +2,9 @@
 :root {
   /* Shared width for page heading + main content so their left edges align */
   --content-width: 900px;
+  /* WhatsApp link text, shared by the footer and contact page */
+  --whatsapp-green: #166534;
+  --whatsapp-green-hover: #14532d;
 }
 
 *,
@@ -803,12 +806,12 @@ section.learn-to-drive {
 }
 
 .contact-whatsapp a {
-  color: #15803d;
+  color: var(--whatsapp-green);
   font-weight: 600;
 }
 
 .contact-whatsapp a:hover {
-  color: #166534;
+  color: var(--whatsapp-green-hover);
 }
 
 /* Left-align the form under the heading at a comfortable width */
@@ -816,6 +819,8 @@ section.learn-to-drive {
   max-width: 640px;
   margin-inline: 0;
   padding-inline: 0;
+  /* the WhatsApp box above already leaves a gap */
+  padding-top: 0;
 }
 
 .learn-to-drive .middle {
@@ -1239,12 +1244,12 @@ textarea {
 }
 
 .footer-whatsapp a {
-  color: #16a34a;
+  color: var(--whatsapp-green);
   font-weight: 500;
 }
 
 .footer-whatsapp a:hover {
-  color: #15803d;
+  color: var(--whatsapp-green-hover);
 }
 
 .footer p {
